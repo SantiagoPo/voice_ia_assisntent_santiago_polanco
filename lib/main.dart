@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'home_page.dart';
+import 'pallete.dart';
+
 
 
 void main() {
@@ -12,11 +14,18 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'voice assistant',
-      home: HomePage(),
+      theme: ThemeData.light(useMaterial3: true).copyWith(
+        scaffoldBackgroundColor: Pallete.white,
+        appBarTheme: const AppBarTheme(
+          backgroundColor: Pallete.white
+        )
+      ),
+      home: const HomePage(),
     );
   }
 }
+
 
